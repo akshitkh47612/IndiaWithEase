@@ -5,8 +5,7 @@ publish = "dist/spa"
 
 [functions]
 node_bundler = "esbuild"
-external_node_modules = ["express", "cors", "nodemailer", "dotenv", "serverless-http"]
-included_files = ["node_modules/**"]
+external_node_modules = ["express", "cors", "nodemailer", "dotenv", "serverless-http", "zod"]
 
 [[redirects]]
 force = true
