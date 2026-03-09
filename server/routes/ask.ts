@@ -40,20 +40,11 @@ export const handleAsk: RequestHandler = async (req, res) => {
 
   const parsed = askSchema.safeParse(body);
   if (!parsed.success) {
-    // DEBUG: temporarily return details so we can identify the issue
-    res.status(400).json({
+    const response: AskResponse = {
       success: false,
       message: "Please fill in all required fields.",
-      _debug: {
-        bodyType: typeof body,
-        bodyIsNull: body === null,
-        bodyIsUndefined: body === undefined,
-        bodyIsBuffer: Buffer.isBuffer(req.body),
-        bodyKeys: body && typeof body === "object" ? Object.keys(body) : null,
-        bodyPreview: typeof body === "string" ? body.slice(0, 200) : null,
-        zodErrors: parsed.error.issues,
-      },
-    });
+    };
+    res.status(400).json(response);
     return;
   }
 
