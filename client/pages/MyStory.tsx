@@ -16,7 +16,7 @@ export default function MyStory() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-[45vh] sm:h-[55vh] min-h-[280px] sm:min-h-[360px] overflow-hidden">
+      <section className="relative h-[40vh] sm:h-[55vh] min-h-[240px] sm:min-h-[360px] overflow-hidden">
         <img
           src="/hero-qutub-minar.png"
           alt="Delhi at night"
@@ -106,7 +106,7 @@ export default function MyStory() {
 
           {/* Pull quote */}
           <div className="my-14 py-8 border-y border-black/[0.06]">
-            <blockquote className="text-[22px] sm:text-[26px] font-extrabold text-foreground tracking-tight leading-snug text-center max-w-lg mx-auto">
+            <blockquote className="text-[19px] sm:text-[26px] font-extrabold text-foreground tracking-tight leading-snug text-center max-w-lg mx-auto">
               &ldquo;Think of me as a friend you can text when you&apos;re not sure
               of the next step.&rdquo;
             </blockquote>
@@ -116,7 +116,7 @@ export default function MyStory() {
           </div>
 
           {/* CTA */}
-          <div className="rounded-2xl bg-white border border-black/[0.04] p-8 sm:p-10 text-center shadow-sm">
+          <div className="rounded-2xl bg-white border border-black/[0.04] p-6 sm:p-10 text-center shadow-sm overflow-hidden">
             <MessageCircle className="w-7 h-7 text-foreground/15 mx-auto mb-4" />
             <h2 className="text-xl sm:text-2xl font-extrabold text-foreground tracking-tight mb-2">
               Got a question about India?
@@ -125,10 +125,10 @@ export default function MyStory() {
               Seriously — ask me anything. No strings attached, no upsells.
               Just honest advice from someone who&apos;s been here a while.
             </p>
-            <Link to="/ask-a-local">
-              <Button className="rounded-full px-7 gap-2 h-11 text-[14px] bg-foreground text-background hover:bg-foreground/90 font-semibold">
+            <Link to="/ask-a-local" className="block">
+              <Button className="rounded-full px-5 sm:px-7 gap-2 h-auto min-h-[44px] py-3 text-[13px] sm:text-[14px] bg-foreground text-background hover:bg-foreground/90 font-semibold w-full sm:w-auto whitespace-normal">
                 Send me a question — no strings attached
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 flex-shrink-0" />
               </Button>
             </Link>
           </div>

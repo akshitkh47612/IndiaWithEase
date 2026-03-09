@@ -6,10 +6,14 @@ import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleAsk } from "./routes/ask";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, "..");
-dotenv.config({ path: path.join(root, ".env") });
-dotenv.config({ path: path.join(root, ".env.local"), override: true });
+try {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const root = path.resolve(__dirname, "..");
+  dotenv.config({ path: path.join(root, ".env") });
+  dotenv.config({ path: path.join(root, ".env.local"), override: true });
+} catch {
+  // In serverless environments (Netlify), env vars are injected by the platform
+}
 
 export function createServer() {
   const app = express();

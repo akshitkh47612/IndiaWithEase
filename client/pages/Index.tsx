@@ -271,7 +271,7 @@ export default function Index() {
       {/* ============================================================ */}
       {/*  HERO — NomadList style, no header                           */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden overflow-x-hidden">
         <div className="absolute inset-0">
           <img
             src="/hero-qutub-minar.png"
@@ -288,7 +288,7 @@ export default function Index() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-[56px] lg:text-[64px] font-extrabold text-white leading-[1.05] tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-[56px] lg:text-[64px] font-extrabold text-white leading-[1.05] tracking-tight mb-6">
             Navigate Delhi,
             <br />
             <span className="text-white/50">the easy way</span>
@@ -475,9 +475,9 @@ export default function Index() {
       {/* ============================================================ */}
       {/*  ASK ME                                                       */}
       {/* ============================================================ */}
-      <section className="py-20 sm:py-24 bg-white border-y border-black/[0.04]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section className="py-16 sm:py-24 bg-white border-y border-black/[0.04]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div>
               <p className="text-[12px] font-semibold uppercase tracking-widest text-muted-foreground/60 mb-3">
                 Ask me
