@@ -30,7 +30,12 @@ function getTransporter() {
 }
 
 export const handleAsk: RequestHandler = async (req, res) => {
-  const parsed = askSchema.safeParse(req.body);
+  let body = req.body;
+  if (typeof body === "string") {
+    try { body = JSON.parse(body); } catch { /* leave as-is */ }
+  }
+
+  const parsed = askSchema.safeParse(body);
   if (!parsed.success) {
     const response: AskResponse = {
       success: false,
